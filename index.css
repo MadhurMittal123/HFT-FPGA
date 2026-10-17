@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap");
+
+/*
+  Design tokens: neutral near-black terminal surfaces, hairline borders,
+  and a strict colour code. Green/red are reserved for direction and P&L,
+  blue is price, amber is the rolling average and warnings.
+*/
+:root,
+:root[data-theme="light"] {
+  --bg: #f2f4f8;
+  --panel: #ffffff;
+  --panel-raised: #f1f4f9;
+  --panel-hover: #f6f8fb;
+  --line: #e2e7ef;
+  --line-strong: #cdd5e1;
+  --ink: #0f1b2d;
+  --ink-soft: #3b4a60;
+  --muted: #68778d;
+  --accent: #1f4fd8;
+  --accent-soft: rgba(31, 79, 216, 0.1);
+  --amber: #c98a00;
+  --up: #0e9f6e;
+  --up-soft: rgba(14, 159, 110, 0.1);
+  --down: #d6334a;
+  --down-soft: rgba(214, 51, 74, 0.09);
+  --warn: #b7791f;
+  --legend-bg: rgba(255, 255, 255, 0.9);
+  --chart-bg: #ffffff;
+  --chart-text: #68778d;
+  --chart-grid-v: rgba(15, 27, 45, 0.04);
+  --chart-grid-h: rgba(15, 27, 45, 0.07);
+  --chart-border: #e2e7ef;
+  --chart-cross: rgba(59, 74, 96, 0.45);
+  --chart-cross-label: #0f1b2d;
+  --chart-price: #1f4fd8;
+  --chart-price-top: rgba(31, 79, 216, 0.2);
+  --chart-price-bottom: rgba(31, 79, 216, 0);
+  --chart-avg: #c98a00;
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --bg: #0b1220;
+  --panel: #111a2b;
+  --panel-raised: #16213a;
+  --panel-hover: #1b2842;
+  --line: #1f2c45;
+  --line-strong: #2d3d5c;
+  --ink: #e6ecf5;
+  --ink-soft: #aebbd0;
+  --muted: #7384a0;
+  --accent: #5b9bff;
+  --accent-soft: rgba(91, 155, 255, 0.14);
+  --amber: #f0b90b;
+  --up: #2ebd85;
+  --up-soft: rgba(46, 189, 133, 0.12);
+  --down: #f6465d;
+  --down-soft: rgba(246, 70, 93, 0.12);
+  --warn: #f0b90b;
+  --legend-bg: rgba(17, 26, 43, 0.88);
+  --chart-bg: #111a2b;
+  --chart-text: #7384a0;
+  --chart-grid-v: rgba(45, 61, 92, 0.35);
+  --chart-grid-h: rgba(45, 61, 92, 0.5);
+  --chart-border: #1f2c45;
+  --chart-cross: rgba(174, 187, 208, 0.4);
+  --chart-cross-label: #2d3d5c;
+  --chart-price: #5b9bff;
+  --chart-price-top: rgba(91, 155, 255, 0.25);
+  --chart-price-bottom: rgba(91, 155, 255, 0);
+  --chart-avg: #f0b90b;
+  color-scheme: dark;
+}
+
+:root {
+  --font-ui: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-data: "JetBrains Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+
+  font-family: var(--font-ui);
+  color: var(--ink);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  min-height: 100%;
+  background: var(--bg);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+body,
+button,
+input {
+  font-family: var(--font-ui);
+}
+
+button {
+  color: inherit;
+  font: inherit;
+}
+
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+::selection {
+  color: #fff;
+  background: rgba(76, 141, 255, 0.5);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--line-strong) transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -23,7 +23,8 @@ Verification
 Screenshot
 Add a screenshot of the actual running web dashboard here:
 docs/dashboard.png
-![FPGA HFT Dashboard](docs/dashboard.png)
+<img width="1917" height="1078" alt="image" src="https://github.com/user-attachments/assets/fe14e5ec-a751-41fd-9732-366669cf849b" />
+
 
 
 Project Status
